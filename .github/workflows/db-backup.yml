@@ -10,9 +10,9 @@ jobs:
     permissions: 
       contents: read
     env:
-      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      SUPABASE_DB_URL: postgresql://postgres:b8sxetarR2RgQ9II@db.nbepshftnfmkrbatcjmw.supabase.co:5432/postgres
+      SUPABASE_URL: https://nbepshftnfmkrbatcjmw.supabase.co
+      SUPABASE_SERVICE_ROLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5iZXBzaGZ0bmZta3JiYXRjam13Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDQ4ODU0MiwiZXhwIjoyMDcwMDY0NTQyfQ.5sUiOSX6AEOZg1Z2dYdMp5se9sX_CZLXxiwK844TG4Q
       BACKUP_BUCKET: db-backups
     steps:
       - uses: actions/checkout@v4
